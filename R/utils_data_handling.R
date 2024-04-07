@@ -102,7 +102,6 @@ interval_long_to_quantile <- function(forecast,
 #' @param ... Arguments
 #' @return A data.table with forecasts in an interval format.
 #' @keywords data-handling
-#' @export
 quantile_to_interval <- function(...) {
   UseMethod("quantile_to_interval")
 }
@@ -125,7 +124,6 @@ quantile_to_interval <- function(...) {
 #'   a data.table in an interval format (either "long" or "wide"), with or
 #'   without a `quantile_level` column. Rows will not be reordered.
 #' @importFrom data.table copy
-#' @export
 #' @rdname quantile_to_interval
 #' @keywords data-handling
 quantile_to_interval.data.frame <- function(forecast,
@@ -165,7 +163,6 @@ quantile_to_interval.data.frame <- function(forecast,
 #' `observed`, `lower`, `upper`, and `interval_range`. The `forecast_id` column
 #' is a unique identifier for each forecast. Rows will be reordered according to
 #' `forecast_id` and `interval_range`.
-#' @export
 #' @rdname quantile_to_interval
 #' @keywords data-handling
 quantile_to_interval.numeric <- function(observed,
